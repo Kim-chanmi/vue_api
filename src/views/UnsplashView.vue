@@ -76,7 +76,19 @@ export default {
 <style lang="scss">
 .unsplash__images {
   ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px;
     li {
+      width: 23%;
+      margin-bottom: 70px;
+      transition: all 0.3s;
+
+      &:hover {
+        transform: scale3d(1.05);
+      }
       a {
         img {
         }

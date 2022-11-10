@@ -28,14 +28,19 @@
                   }"
                   :pagination="true"
                   :modules="modules"
+                  :navigation="true"
                   class="mySwiper"
                 >
-                  <swiper-slide v-for="slider in sliders" :key="slider.id">
+                  <swiper-slide
+                    v-for="(slider, index) in sliders"
+                    :key="slider.id"
+                  >
                     <a :href="`https://www.themoviedb.org/movie/${slider.id}`">
                       <img
                         :src="`https://image.tmdb.org/t/p/w500/${slider.poster_path}`"
                         :alt="slider.title"
                       />
+                      <span class="star">{{ index + 1 }}위</span>
                     </a>
                   </swiper-slide>
                 </swiper>
@@ -89,7 +94,7 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import { EffectCoverflow, Pagination, Autoplay } from "swiper";
+import { EffectCoverflow, Pagination, Autoplay, Navigation } from "swiper";
 
 export default {
   components: {
@@ -132,7 +137,7 @@ export default {
       sliders,
       search,
       SearchMovies,
-      modules: [EffectCoverflow, Pagination, Autoplay],
+      modules: [EffectCoverflow, Pagination, Autoplay, Navigation],
       TopMoviies,
     };
   },
@@ -257,6 +262,20 @@ export default {
   }
   a {
     color: var(--black);
+
+    .star {
+      background: #fff;
+      color: #000;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 30px;
+      font-weight: 700;
+    }
   }
 }
 </style>
