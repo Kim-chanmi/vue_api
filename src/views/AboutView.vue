@@ -7,7 +7,7 @@
         <div className="about__inner">
           <div className="part1">
             <img
-              src="https://github.com/Kim-chanmi/react_api/blob/main/src/assets/img/About_React01.jpg?raw=true"
+              src="https://github.com/Kim-chanmi/vue_api/blob/main/src/assets/img/About_Vue01.jpg?raw=true"
               alt="하늘"
             />
             <h3 className="about__title">
@@ -35,7 +35,7 @@
           </div>
           <div className="part2">
             <img
-              src="https://github.com/Kim-chanmi/react_api/blob/main/src/assets/img/About_React02.jpg?raw=true"
+              src="https://github.com/Kim-chanmi/vue_api/blob/main/src/assets/img/About_Vue02.jpg?raw=true"
               alt="러닝"
             />
             <div>
@@ -105,19 +105,17 @@ export default {
 };
 </script>
 <style lang="scss">
-.cont__about {
-}
 .about__inner {
   > div {
     margin-bottom: 500px;
     font-family: var(--font-kor2);
     line-height: 1.6;
-    color: var(--white);
+    color: var(--black);
 
     .about__title {
       font-size: 24px;
       margin-bottom: 30px;
-      color: var(--white);
+      color: var(--black);
     }
     p {
       text-align: 1.5;
