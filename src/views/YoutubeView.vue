@@ -154,7 +154,8 @@ export default {
   ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 10px;
     font-family: var(--font-kor1);
     li {
       width: 24%;

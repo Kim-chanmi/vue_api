@@ -181,8 +181,8 @@ body {
     margin-bottom: 70px;
   }
   .swiper-slide img {
-    width: 250px !important;
-    height: 300px !important;
+    width: 250px;
+    height: 300px;
   }
 
   .swiper-slide {
